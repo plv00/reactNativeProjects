@@ -3,11 +3,13 @@ import { View } from 'react-native';
 
 const CardSection = (props) => {
     return (
-        <View style={styles.containerStyle}>
+        <View style={[styles.containerStyle, props.style]}>
            {props.children}
         </View>
     );
 };
+// style can have array, most to the right will override left style
+
 
 const styles = {
     containerStyle: {
