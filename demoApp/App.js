@@ -1,6 +1,11 @@
 import React from 'react';
 import { Button, View, Text, Image } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import LoginForm from './src/components/LoginForm';
+import AlbumList from './src/components/AlbumList';
+import PokemonList from './src/components/PokemonList';
+
+
 class LogoTitle extends React.Component {
   render() {
     return (
@@ -28,6 +33,27 @@ class HomeScreen extends React.Component {
               itemId: 86,
               otherParam: 'testing pass param',
             })}
+          }
+        />
+
+        <Button 
+          title="Go to LoginForm"
+          onPress={() => {
+            this.props.navigation.navigate('LoginForm')}
+          }
+        />
+
+         <Button 
+          title="Go to AlbumList"
+          onPress={() => {
+            this.props.navigation.navigate('AlbumList')}
+          }
+        />
+
+        <Button 
+          title="Go to PokemonList"
+          onPress={() => {
+            this.props.navigation.navigate('PokemonList')}
           }
         />
       </View>
@@ -90,6 +116,15 @@ const RootStack = StackNavigator(
     },
     Details: {
       screen: DetailsScreen,
+    },
+    LoginForm: {
+      screen: LoginForm,
+    },
+    AlbumList: {
+      screen: AlbumList,
+    },
+   PokemonList: {
+      screen: PokemonList,
     },
   },
   {
