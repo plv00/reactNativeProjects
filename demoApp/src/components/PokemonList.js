@@ -14,7 +14,11 @@ class PokemonList extends Component {
       <View style={styles.container}>
         <FlatList
           data={this.state.pokemons}
-          renderItem={({item}) => <Text style={styles.item}>{item.name}</Text>}
+          renderItem={({item}) => 
+            <View>
+              <Text style={styles.item}>{item.name}</Text>
+            </View>
+            }
         />
       </View>
     );
